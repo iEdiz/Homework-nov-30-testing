@@ -36,9 +36,9 @@ $('.js-form').on('submit', (e) => {
     alert('success!');
   } else if (isNameValid !== true) {
     alert('Name is invalid!');
-  } else if (isEmailValid !== true) {
-    alert('Email is invalid!');
   } else if (isPasswordValid !== true) {
     alert('Password is invalid!');
+  } else if (isEmailValid !== true) {
+    alert('Email is invalid!');
   }
 });
