@@ -1,0 +1,25 @@
+body {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: grey;
+  padding: 50px;
+}
+
+.wrapper__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.wrapper__input {
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
