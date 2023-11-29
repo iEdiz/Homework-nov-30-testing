@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-color: rgb(252, 249, 245);
@@ -9,9 +13,17 @@ body {
   font-family: 'Cormorant Garamond', serif;
 }
 
+.main-header {
+  text-align: center;
+  margin: 0 0 25px 0;
+  font-size: 47px;
+  font-family: 'Indie Flower', cursive;
+  color: #47433e;
+}
+
 .wrapper {
   background-image: linear-gradient(to right, #EBE3D5, #B0A695);
-  padding: 45px 60px 30px 60px;
+  padding: 40px 60px 30px 60px;
   border-radius: 30px;
   border: #B0A695 solid 1px;
   box-shadow: 0px 4px 5px #776B5D;
@@ -25,7 +37,7 @@ body {
 }
 
 .wrapper__input {
-  font-size: 35px;
+  font-size: 33px;
   border-radius: 10px;
   border: solid 1px #776B5D;
   padding: 15px 15px 10px 20px;
@@ -34,10 +46,17 @@ body {
   box-shadow: 0px 2px 5px #776B5D;
 }
 
+.wrapper__input:focus {
+  outline: none;
+  box-shadow: 0 0 4px 3px #776B5D;
+  transition: 0.3s ease;
+}
+
 .wrapper__label-heading {
-  font-size: 40px;
+  font-size: 35px;
   margin: 0 0 10px 0;
   color: #514c46;
+  font-weight: 500;
 }
 
 .button-wrapper {
@@ -66,4 +85,10 @@ body {
 
 .wrapper__button:focus {
   outline: none;
+}
+
+.toastify {
+  font-size: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 5px #352F44;
 }

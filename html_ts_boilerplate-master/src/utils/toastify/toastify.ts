@@ -10,7 +10,8 @@ export const toastifyFunction = (message: string) => {
     position: 'right', // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
-      background: 'linear-gradient(to right, #352F44, #B9B4C7)',
+      background: 'linear-gradient(to right, #BFC4B3, #6A8682)',
     },
+    className: 'toastify',
   }).showToast();
 };

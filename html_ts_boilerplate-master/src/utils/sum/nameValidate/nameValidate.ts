@@ -12,6 +12,5 @@ export const nameValidate = (name: string) => {
   if (name.includes(' ')) {
     return false;
   }
-
   return true;
 };
