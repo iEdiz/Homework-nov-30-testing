@@ -1,25 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body {
-  background-color: antiquewhite;
+  background-color: rgb(252, 249, 245);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .wrapper {
-  background-color: grey;
-  padding: 50px;
+  background-image: linear-gradient(to right, #EBE3D5, #B0A695);
+  padding: 45px 60px 30px 60px;
+  border-radius: 30px;
+  border: #B0A695 solid 1px;
+  box-shadow: 0px 4px 5px #776B5D;
 }
 
 .wrapper__form {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .wrapper__input {
-  font-size: 30px;
+  font-size: 35px;
   border-radius: 10px;
-  border: none;
-  padding: 15px;
+  border: solid 1px #776B5D;
+  padding: 15px 15px 10px 20px;
+  font-family: 'Indie Flower', cursive;
+  background-color: #FEF9F0;
+  box-shadow: 0px 2px 5px #776B5D;
+}
+
+.wrapper__label-heading {
+  font-size: 40px;
+  margin: 0 0 10px 0;
+  color: #514c46;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.wrapper__button {
+  padding: 10px 40px 10px 40px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid #776B5D;
+  background-color: #EBE3D5;
+  color: #514c46;
+  cursor: pointer;
+}
+
+.wrapper__button:active {
+  background-color:  #514c46;
+  color: #EBE3D5;
+  border: 2px solid #EBE3D5;
+}
+
+.wrapper__button:focus {
+  outline: none;
+}
+
+.wrapper__button:hover {
+  opacity: 1;
+  transition: 0.3s;
 }

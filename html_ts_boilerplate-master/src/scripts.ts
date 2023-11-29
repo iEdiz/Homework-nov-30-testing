@@ -2,22 +2,25 @@ import $ from 'jquery';
 import { nameValidate } from './utils/sum/nameValidate/nameValidate';
 import { emailValidate } from './utils/emailValidate/emailValidate';
 import { passwordValidate } from './utils/passwordValidate/passwordValidate';
+import { toastifyFunction } from './utils/toastify/toastify';
 
 $('.js-wrapper').html(`
     <form action="" class="wrapper__form js-form">
         <label for="name">
-            <h1>Your name</h1>
-            <input type="text" name="name" id="name" class="wrapper__input js-name" placeholder="Name">
+            <h1 class="wrapper__label-heading">Your name:</h1>
+            <input type="text" name="name" id="name" class="wrapper__input js-name" placeholder="Username">
         </label>
         <label for="password">
-            <h1>Your password</h1>
+            <h1 class="wrapper__label-heading">Your password:</h1>
             <input type="password" name="password" id="password" class="wrapper__input js-password" placeholder="Password">
         </label>
         <label for="email">
-            <h1>Your email</h1>
+            <h1 class="wrapper__label-heading">Your email:</h1>
             <input type="email" name="email" id="email" class="wrapper__input js-email" placeholder="Email">
         </label>
-        <button type="submit">Button</button>
+        <div class="button-wrapper">
+        <button type="submit" class="wrapper__button">Submit</button>
+        </div>
     </form>
 `);
 
@@ -33,12 +36,12 @@ $('.js-form').on('submit', (e) => {
   const isPasswordValid = passwordValidate(password.toString());
 
   if (isNameValid === true && isEmailValid === true && isPasswordValid === true) {
-    alert('success!');
+    toastifyFunction('Form is accepted! 🎉');
   } else if (isNameValid !== true) {
-    alert('Name is invalid!');
+    toastifyFunction('Invalid username! 😤');
   } else if (isPasswordValid !== true) {
-    alert('Password is invalid!');
+    toastifyFunction('Invalid password! 🔑');
   } else if (isEmailValid !== true) {
-    alert('Email is invalid!');
+    toastifyFunction('Invalid email! 📧');
   }
 });
