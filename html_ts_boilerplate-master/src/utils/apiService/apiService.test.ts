@@ -13,4 +13,6 @@ const mockResponse = {
 
 (axios.get as jest.Mock).mockImplementation(() => Promise.resolve(mockResponse));
 
-it('should return correct data', () => expect(fetchData()).resolves.toEqual(mockResponse.data));
+it('should return correct data', () => fetchData().then((result) => {
+  expect(result).toEqual(mockResponse.data);
+}));
