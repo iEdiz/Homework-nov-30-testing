@@ -31,9 +31,9 @@ $('.js-form').on('submit', (e) => {
 
   const passwordRegex = /(?=.*[!@#$%^&*])(?=.*[0-9])(?=.[a-zA-Z])/;
 
-  const name = $('.js-name').val();
-  const email = $('.js-email').val();
-  const password = $('.js-password').val();
+  const name = $<HTMLInputElement>('.js-name').val();
+  const email = $<HTMLInputElement>('.js-email').val();
+  const password = $<HTMLInputElement>('.js-password').val();
 
   const isNameValid = nameValidate(name.toString());
   const isEmailValid = emailValidate(email.toString());

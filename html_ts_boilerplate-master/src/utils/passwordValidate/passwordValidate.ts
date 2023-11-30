@@ -1,10 +1,10 @@
 export const passwordValidate = (password: string) => {
-  const specialCharAndNumberRegx = /(?=.*[!@#$%^&*])(?=.*[0-9])(?=.[a-zA-Z])/;
+  const alloweedSpecialChars = /(?=.*[!@#$%^&*])(?=.*[0-9])(?=.[a-zA-Z])/;
   const invalidSpecialCharacter = /[()_+{}[\]:;<>,.?~\\-]/;
   // eslint-disable-next-line no-control-regex
   const nonEnglishCharRegx = /[^\x00-\x7F]/;
 
-  if (specialCharAndNumberRegx.test(password) !== true) {
+  if (alloweedSpecialChars.test(password) !== true) {
     return false;
   }
 
